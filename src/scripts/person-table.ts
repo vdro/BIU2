@@ -5,7 +5,6 @@ export class PersonTable{
 
     constructor(public context: JQuery) {
     }
-
     personService = new PersonService()
     list = new PersonList();
     currentPage = 0;
