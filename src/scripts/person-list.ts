@@ -24,13 +24,13 @@ export class PersonList {
     
     private generateTableHeader(): string {
         return '<tr><th>Id</th>'
-            + ' <th><button  class="btn btn-sm btn-danger js-sort-name">Name</button></th>'
-            + ' <th>Surname</th>'
-            + ' <th>Gender</th>'
-            + ' <th>Email</th>'
-            + ' <th>Age</th>'
-            + ' <th>Birthsday</th>'
-            + ' <th>Income</th>'
+            + ' <th><button class="btn btn-sm btn-danger js-sort-name">Name</button></th>'
+            + ' <th><button class="btn btn-sm btn-danger js-sort-name">Surname</button></th>'
+            + ' <th><button class="btn btn-sm btn-danger js-sort-name">Gender</button></th>'
+            + ' <th><button class="btn btn-sm btn-danger js-sort-name">Email</button></th>'
+            + ' <th><button class="btn btn-sm btn-danger js-sort-name">Age</button></th>'
+            + ' <th><button class="btn btn-sm btn-danger js-sort-name">Birthsday</button></th>'
+            + ' <th><button class="btn btn-sm btn-danger js-sort-name">Income</button></th>'
             + '</tr>'
     }
 }

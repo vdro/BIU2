@@ -17,7 +17,6 @@ export class PersonService {
         return people
             .slice(begin * pagingInfo.count,
                     begin * pagingInfo.count + pagingInfo.count)
-                //-> z zaimportowanej kolekcji wybieramy stronę wynikow 
             .map(x => {
                 let person = new PersonListItem();
                 person.firstname = x.firstName;
@@ -30,7 +29,6 @@ export class PersonService {
                 person.id = x.id;
                 return person;
             });
-            //-> pobrane wyniki mapujemy na obiekty PersonListItem
     }
 }
 
