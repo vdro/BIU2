@@ -5,24 +5,27 @@ const advancedSearchButton = $('.js-adv-search-btn');
 const peopleTable = $('div#table');
 const tableNext = $('#js-button-next');
 const tablePrev = $('#js-button-prev');
-const tableShow10 = $('#js-button-10');
-const tableShow25 = $('#js-button-25');
-const tableShow50 = $('#js-button-50');
-const tableShow100 = $('#js-button-100');
+const pages = $("#howManyRows");
+const searchBtn = $('.js-search-btn');
+
 
 class Startup {
     public static main(): void {
         advancedSearch.hide();
         advancedSearchButton.click((event) => Startup.onAdvancedSearchClicked(event));
         let table = new PersonTable(peopleTable);
+
         table.next();
         tableNext.click(() => table.next());
         tablePrev.click(() => table.prev());
-       // tableShow10.click(()=> table.pageSize(10));
+        pages.change(() => table.next())
+        searchBtn.click(()=>table.search($('.form')));
+        
     }
 
     private static onAdvancedSearchClicked(event: JQueryEventObject) {
         event.preventDefault();
+        // -> powouje, że strona nie będzie się przeładowywac
         if (advancedSearch.is(':visible')) {
             advancedSearch.fadeOut(1000);
         } else {
